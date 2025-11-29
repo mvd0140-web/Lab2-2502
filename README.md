@@ -44,12 +44,12 @@ public class okeoke {
     public static void main(String[] args) {
         int n = in.nextInt();
         int a1 = in.nextInt();
-        int [] a = new int[n];
+        int [] a = new int[n + 1];
         a[0] = a1;
-        for (int i = 0; i < n - 1; i++) {
-            a[i+1] = pro(a[i]) * 7;
+        for (int i = 1; i < n + 1; i++) {
+            a[i] = pro(a[i-1]) * 7;
         }
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < n + 1; i++) {
             out.print(a[i] + " ");
         }
     }
@@ -69,7 +69,7 @@ public class okeoke {
 
    - **Output**:
         ```
-        14 28 112 14 28 112 14 28 112 14 28 112 14 28 112 14 28 112 14 
+        14 28 112 14 28 112 14 28 112 14 28 112 14 28 112 14 28 112 14 28
         ```
 Тест 2.
    - **Input**:
@@ -78,21 +78,23 @@ public class okeoke {
         5
         ```
 
-  - **Output**:
+   - **Output**:
         ```
-        35 105 0 0 0 0 0 0 0 0 0 0 0 0
+        35 105 0 0 0 0 0 0 0 0 0 0 0 0 0
         ```
+
 Тест 3.
    - **Input**:
         ```
-        15
+        10
         -9
         ```
 
-  - **Output**:
+   - **Output**:
         ```
-        0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+        0 0 0 0 0 0 0 0 0 0
         ```
+    
 Тест 4.
    - **Input**:
         ```
@@ -100,10 +102,13 @@ public class okeoke {
         190
         ```
 
-  - **Output**:
+   - **Output**:
         ```
-        0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0
         ```
+
 Все тесты совпали с результатами, которые выдает сайт, где расположена лабораторная работа.
+
+## Задание 2
 
 
