@@ -17,3 +17,45 @@
 Я проанализировала последовательность и вывела закономерность, какие значения принимает переменная: каждый новый член последовательности получается умножением произведения цифр предыдущего члена на 7.
 #### Программа
 
+```java
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class okeoke {
+    public static Scanner in = new Scanner(System.in);
+    public static PrintStream out = System.out;
+
+    static int pro(int a) {
+        int q = a;
+        int w = 1;
+        if (q <= 0) {
+            return 0;
+        }
+        else {
+            while (q > 0) {
+                int z = q % 10;
+                w = w * z;
+                q = q / 10;
+            }
+            return w;
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = in.nextInt();
+        int a1 = in.nextInt();
+        int [] a = new int[n];
+        a[0] = a1;
+        for (int i = 0; i < n - 1; i++) {
+            a[i+1] = pro(a[i]) * 7;
+        }
+        for (int i = 1; i < n; i++) {
+            out.print(a[i] + " ");
+        }
+    }
+}
+
+```
+#### Анализ правильности решения
+
+
